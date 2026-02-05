@@ -10,11 +10,14 @@ Deploying to Vercel — Important notes
 - If you want persistence, set up a DB and update `api/messages.js` to use that DB instead of the local JSON file.
 
 3) How to switch to Vercel KV (recommended for small-scale)
-- Enable Vercel KV in your project and set `USE_KV=true` in project Environment Variables.
-- Replace file-based functions in `api/messages.js` with `@vercel/kv` client calls. Example:
+- Enable Vercel KV for your project (via Vercel dashboard or CLI). In your Vercel project, add the environment variable `USE_KV=true`.
+- The included `api/messages.js` already supports KV when `USE_KV=true` — it will use `@vercel/kv` for reads/writes and fallback to local file storage when KV is not available.
+- If you prefer using the CLI, after enabling KV, deploy and test your endpoints with:
 
-  const { kv } = require('@vercel/kv');
-  await kv.json.set('messages', messages);
+  GET https://your-deployment-url/api/messages
+  POST https://your-deployment-url/api/messages { "text": "hello" }
+
+- If you need help wiring KV to your project, tell me and I can add step-by-step CLI commands for your repo and add sample migration scripts.
 
 4) How to switch to MongoDB (recommended for production)
 - Create a MongoDB Atlas cluster, get connection string, add it as `MONGODB_URI` env var.
