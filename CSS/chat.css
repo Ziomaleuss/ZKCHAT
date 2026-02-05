@@ -1,0 +1,191 @@
+/* Styles for Chat Page */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.chat-info {
+    text-align: center;
+    color: #a0a0a0;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Chat Message Bubble */
+.message-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    /* No default animation — will only animate when .animate class is present */
+    opacity: 1;
+    transform: none;
+}
+
+/* Animate only when explicitly requested (new messages) */
+.message-item.animate {
+    animation: slideInMessage 0.4s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideInMessage {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+/* User Avatar */
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.message-nick {
+    font-weight: 600;
+    color: #e5e5e5;
+    font-size: 0.9rem;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: #707070;
+}
+
+/* Message Bubble */
+.message-bubble {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    max-width: 400px;
+    word-wrap: break-word;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.message-bubble:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+.message-text {
+    color: #e5e5e5;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Different color variations for variety */
+.message-item:nth-child(3n) .message-bubble {
+    background: linear-gradient(135deg, rgba(118, 184, 255, 0.15) 0%, rgba(106, 158, 255, 0.15) 100%);
+    border-color: rgba(118, 184, 255, 0.3);
+}
+
+.message-item:nth-child(3n) .message-bubble:hover {
+    background: linear-gradient(135deg, rgba(118, 184, 255, 0.2) 0%, rgba(106, 158, 255, 0.2) 100%);
+    border-color: rgba(118, 184, 255, 0.5);
+    box-shadow: 0 6px 16px rgba(118, 184, 255, 0.2);
+}
+
+.message-item:nth-child(3n+2) .message-bubble {
+    background: linear-gradient(135deg, rgba(255, 179, 120, 0.15) 0%, rgba(255, 140, 80, 0.15) 100%);
+    border-color: rgba(255, 179, 120, 0.3);
+}
+
+.message-item:nth-child(3n+2) .message-bubble:hover {
+    background: linear-gradient(135deg, rgba(255, 179, 120, 0.2) 0%, rgba(255, 140, 80, 0.2) 100%);
+    border-color: rgba(255, 179, 120, 0.5);
+    box-shadow: 0 6px 16px rgba(255, 179, 120, 0.2);
+}
+
+/* Avatar variations */
+.message-item:nth-child(3n) .user-avatar {
+    background: linear-gradient(135deg, #76b8ff 0%, #6a9eff 100%);
+    box-shadow: 0 4px 12px rgba(118, 184, 255, 0.4);
+}
+
+.message-item:nth-child(3n+2) .user-avatar {
+    background: linear-gradient(135deg, #ffb378 0%, #ff8c50 100%);
+    box-shadow: 0 4px 12px rgba(255, 179, 120, 0.4);
+}
+
+/* Loading animation */
+.loading {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.loading-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #667eea;
+    animation: pulse 1.4s infinite;
+}
+
+.loading-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .message-bubble {
+        max-width: 280px;
+    }
+
+    .user-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+
+    .message-item {
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}

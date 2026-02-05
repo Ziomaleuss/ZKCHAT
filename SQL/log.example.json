@@ -1,0 +1,39 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "nick": "Anonymous",
+      "pic": "https://ui-avatars.com/api/?name=Anonymous&background=667eea&color=fff&size=40",
+      "text": "Witajcie! To jest anonimowy czat.",
+      "timestamp": "2026-02-05T09:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "nick": "Anonymous",
+      "pic": "https://ui-avatars.com/api/?name=Anonymous&background=76b8ff&color=fff&size=40",
+      "text": "Każdy może tutaj pisać bez ujawniania tożsamości!",
+      "timestamp": "2026-02-05T09:05:00.000Z"
+    },
+    {
+      "id": 3,
+      "nick": "Anonymous",
+      "pic": "https://ui-avatars.com/api/?name=Anonymous&background=ffb378&color=fff&size=40",
+      "text": "Wiadomości są zapisywane w log.json",
+      "timestamp": "2026-02-05T09:10:00.000Z"
+    },
+    {
+      "id": 4,
+      "nick": "Anonymous",
+      "pic": "https://ui-avatars.com/api/?name=Anonymous&background=667eea&color=fff&size=40",
+      "text": "Fajnie, że wszystko działa w real-time! 🎉",
+      "timestamp": "2026-02-05T09:15:00.000Z"
+    },
+    {
+      "id": 5,
+      "nick": "Anonymous",
+      "pic": "https://ui-avatars.com/api/?name=Anonymous&background=76b8ff&color=fff&size=40",
+      "text": "Te animacje wyglądają super!",
+      "timestamp": "2026-02-05T09:20:00.000Z"
+    }
+  ]
+}

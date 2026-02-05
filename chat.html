@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/chat.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">ChatApp</div>
+            <ul class="nav-links">
+                <li><a href="indexx.html">Home</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="chat.html">Chat</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="chat-container">
+        <h1>Anonymous Chat Room</h1>
+        <p class="chat-info">Welcome to the anonymous chat! Messages are saved and displayed in real-time</p>
+        <div class="chat-box" id="chat-box">
+            <!-- Chat messages will appear here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message" placeholder="Type a message..." autocomplete="off">
+            <button id="send">Send</button>
+        </div>
+    </div>
+    
+    <script src="/JS/chat-system.js"></script>
+</body>
+</html>

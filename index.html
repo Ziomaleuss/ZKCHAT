@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatApp — Start</title>
+  <link rel="stylesheet" href="/CSS/style.css">
+  <meta http-equiv="refresh" content="2;url=/chat.html">
+  <style>
+    .landing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      color: #e5e5e5;
+      text-align: center;
+      padding: 2rem;
+    }
+    .landing .btn {
+      padding: .75rem 1.25rem;
+      background: #ffffff;
+      color: #0a0a0a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    .small { color: #b0b0b0; font-size: .95rem; }
+  </style>
+</head>
+<body>
+  <main class="landing">
+    <h1>Witaj w ChatApp</h1>
+    <p class="small">Strona startowa została ustawiona. Nastąpi przekierowanie do pokoju czatu za <strong>2 sekundy</strong>.</p>
+    <p class="small">Jeśli nic się nie zmieni, kliknij poniżej:</p>
+    <a class="btn" href="/chat.html">Przejdź do czatu</a>
+    <p class="small">Wiadomości będą zapisywane w <code>SQL/log.json</code></p>
+  </main>
+</body>
+</html>
