@@ -4,7 +4,7 @@
   "description": "Real-time anonymous chat application with JSON storage",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "index.html",
     "dev": "nodemon server.js",
     "vercel-build": "echo \"skip build\""
   },
